@@ -15,6 +15,7 @@ class RandomForest(object):
     def __init__(self, num_trees, max_tree_depth, ratio_per_tree=0.5):
         self.num_trees = num_trees
         self.max_tree_depth = max_tree_depth
+        self.ratio_per_tree = ratio_per_tree
         self.trees = None
 
     def fit(self, X, Y):
@@ -24,7 +25,7 @@ class RandomForest(object):
         """
         self.trees = []
         for i in range(self.num_trees):
-            idx = np.arange(X.shape[0])
+            idx = np.arange(int(X.shape[0]* self.ratio_per_tree))
             np.random.shuffle(idx)
             X_train = X[idx]
             Y_train = Y[idx]
