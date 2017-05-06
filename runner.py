@@ -57,7 +57,7 @@ def evaluate_performance():
         for i in range(k_folds):
             
             train_set = list(indexes)
-            print('a')
+           
             a = train_set[i]
             train_set.pop(i)
                 
