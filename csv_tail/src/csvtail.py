@@ -69,11 +69,7 @@ def parse_args():
     parser.add_argument('-q', '--quiet', help="Don't print information regarding errors", action='store_true')
     parser.add_argument('--careful', help='Stop if input contains an incorrect row', action='store_true')
 
-    parser.add_argument('-s', '--separator', type=str, help='Separator to be used', default=',')
     parser.add_argument('-f', '--format_floats', help='Format floating-point numbers nicely', action='store_true')
-
-
-
     parser.add_argument('-n', '--number_of_lines', type=int,
                         help='Number of last rows to print if positive `ROWS_COUNT`.\
                              Else skips `ROWS_COUNT` lines and prints till the end of input.', default=0)
